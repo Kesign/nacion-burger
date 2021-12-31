@@ -1,0 +1,21 @@
+#somos, #mision, #vision
+{
+position: relative;
+margin: 4vh 0;
+height: 40vh;
+width: 100%;
+}
+	#somos p:nth-child(1), #mision p:nth-child(1), #vision p:nth-child(1)
+	{
+	font-size: 3vw;
+	text-align: center;
+	color: white;
+	margin: 2vh 0;
+	}
+	#somos p:nth-child(2), #mision p:nth-child(2), #vision p:nth-child(2)
+	{
+	padding: 0 2vw;
+	font-size: 2vw;
+	text-align: center;
+	color: white;
+	}

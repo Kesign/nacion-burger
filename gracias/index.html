@@ -1,0 +1,149 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="HandheldFriendly" content="true" />
+    <title>Gracias</title>
+    <link rel="shortcut icon" href="../multimedia/wfavicon.png">
+    <script type="text/javascript" src="https://cdn.jotfor.ms//js/prototype.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms//css/thankyou.css" />
+    <style type="text/css">
+      body {
+        background:  #F3F3FE;
+        font-family: Inter, sans-serif;
+        font-size: 16px;
+        color: #2C3345;
+      }
+      .form-all {
+        background:  #FFFFFF;
+        max-width: 752px;
+      }
+      .thankyou-sub-text {
+        color: #2C3345;
+      }
+      #footer {
+        max-width: 752px;
+      }
+
+      .thankYouDownloadPDFWrapper {
+        border-top: 1px solid  #F3F3FE;
+      }
+      .ty-buttons.thankYouEditSubmission, .ty-buttons.thankYouDownloadPDF { 
+        color: #2C3345;
+        background-color: #FFFFFF;
+        border-color: #2C3345;
+      }
+      .ty-buttons.thankYouFillAgain { 
+        color: #2C3345;
+        background-color: #FFFFFF;
+        border-color: #2C3345;
+      }
+      @media print {
+       .form-all {
+        width: 752px;
+       } 
+
+      }
+    </style>
+    <style type="text/css">
+    .form-label.form-label-auto {
+        
+      display: block;
+      float: none;
+      text-align: left;
+      width: 100%;
+    
+      }
+.form-all { padding:0;
+        }
+       .nonEditableInvisable.isPDF .thankYouDownloadPDFWrapper { padding-bottom: 30px;
+       }
+          html { height: 100%;}
+    body {
+      padding: 0;
+    }
+    .thank-you-icon {
+      display: none;
+    }
+    .wrapper {
+      display:flex;
+     flex-direction: column;
+      min-height: 400px;
+    }
+    [class*="col-"] {
+      justify-content: center;
+      align-items: center;
+      display:flex;
+    }
+    .col-1 {
+      background-image : url("https://cdn.jotfor.ms/assets/img/thankYou/backgrounds/defaults/fullPage.png");
+      background-repeat : no-repeat;
+      background-size: 80%, cover;
+      background-position: center;
+      background-color: #e8f6ed;
+      min-height: 268px;
+        order: 0;
+}
+    .col-1 img {
+      display: none;
+    }
+    .col-2 {
+      display: flex;
+      flex-direction: column;
+     margin: auto;
+      min-height: 33%;
+      width: 100%;
+      padding: 16px;
+      order: 1;
+ }      @media screen and (max-width: 480px) {
+        .col-1 {
+      background-size: 100%;
+          min-height:calc(100vh /4);
+        }
+     }div.wrapper .col-1 {
+ background-size: ;
+}
+
+    </style>
+  </head>
+  <body class="thankyou">
+    <div id="stage" class="form-all">
+      <div class="wrapper"><div class="col-1"></div><div class="col-2"><div class="thankyou-wrapper"><p class="thank-you-icon" style="text-align:center;"><img class="notActiveTyIcon" src="https://cdn.jotfor.ms/img/Thankyou-iconV2.png?v=0.1" alt="" width="153" height="156" /></p><div style="text-align:center;"><h1 class="thankyou-main-text ty-text" style="text-align:center;">¡Gracias {Nombre}!</h1><p class="thankyou-sub-text ty-text" style="text-align:center;">Tu pedido se está preparando</p></div></div><div class="nonEditableInvisable"></div></div></div><div class="nonEditableInvisable isPDF notActive"></li></ul></div></div></div>
+</div>
+
+    </div>
+  </body>
+  <script type="text/javascript">
+    if (window.parent !== window) {
+      var stageMarginTop = ($('stage')) ? parseInt($('stage').getStyle('marginTop')) : 0;
+      var height = $$('body').first().getHeight() + (stageMarginTop * 2);
+      window.parent.postMessage('setHeight:' + height + ':213545824344052', '*');
+      window.parent.postMessage({ action: 'submission-completed', formID: '213545824344052' }, '*');
+    }
+
+    // Prevent duplicate submission on mobile safari, #2391271
+    // Prevent duplicate submission on desktop safari, #3238172
+    var isSafari = (/(\s|^)AppleWebKit\/[\d\.]+\s+\(.+\)\s+Version\/(1[0-9]|[2-9][0-9]|\d{3,})(\.|$|\s)/i).test(window.navigator.userAgent);
+    if (isSafari) {
+      var origin = 'https://submit.jotform.com/';
+      var url = origin + '213545824344052';
+      // be sure of being same origin before using referrer
+      if (document.referrer && document.referrer.indexOf(origin) !== -1) {
+        url = document.referrer;
+      }
+      window.history.replaceState("", "", url);
+    }
+    window.newThankYouPage = true;
+    window.submissionID = '';
+    window.formID = '213545824344052';
+    var favicon = document.querySelector('link[rel="shortcut icon"]');
+    window.isDarkMode = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if(favicon && window.isDarkMode) {
+      favicon.href = favicon.href.replaceAll('favicon-2021-light.ico', 'favicon-2021-dark.ico');
+    }
+  </script>
+  <script src='https://submit.jotform.com//js/includes/thankYouPageScripts.js' ></script>
+  
+</html>
